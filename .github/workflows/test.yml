@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 jobs:
-  python:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -24,15 +24,6 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
 
-  public-entry:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apps/public-entry
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -41,8 +32,9 @@ jobs:
           cache-dependency-path: apps/public-entry/package-lock.json
 
       - name: Install dependencies
+        working-directory: apps/public-entry
         run: npm ci
 
       - name: Build public entry
+        working-directory: apps/public-entry
         run: npm run build
-
