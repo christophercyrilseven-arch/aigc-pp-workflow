@@ -37,7 +37,7 @@ For real generation, configure a provider:
 export AIGCPP_PROVIDER=openai-compatible
 export AIGCPP_BASE_URL=https://model-server.example/v1
 export AIGCPP_MODEL=your-model-name
-export AIGCPP_API_KEY=optional-token
+export AIGCPP_API_KEY=
 ```
 
 Ollama-compatible usage:
