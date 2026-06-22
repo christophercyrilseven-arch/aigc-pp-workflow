@@ -1,0 +1,22 @@
+id: film
+version: v1
+name: Film Expert Pack
+roles:
+  - story_architect
+  - screenplay_writer
+  - script_doctor
+  - director
+  - cinematographer
+  - lighting_designer
+  - production_designer
+  - editor
+  - prompt_director
+  - asset_consistency_reviewer
+  - qc_reviewer
+rules:
+  - shots_have_start_middle_end
+  - subject_motion_separate_from_camera_motion
+  - assets_keep_identity_consistent
+  - shot_prompts_use_explicit_references
+  - negative_prompts_block_common_failures
+  - qc_failures_create_repair_tasks

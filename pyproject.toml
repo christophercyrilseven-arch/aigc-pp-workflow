@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aigc-pp-workflow"
+version = "0.1.0"
+description = "AIGC Production Pipeline Workflow: local-first novel, film, asset, shot prompt, and QC automation."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{ name = "AIGC PP Workflow Contributors" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+aigcpp = "aigcpp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["packages/core/src", "packages/providers/src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["packages/core/src", "packages/providers/src"]

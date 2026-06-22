@@ -1,0 +1,17 @@
+id: novel
+version: v1
+name: Novel Expert Pack
+roles:
+  - world_architect
+  - character_designer
+  - plot_engineer
+  - prose_editor
+  - continuity_auditor
+  - qc_reviewer
+rules:
+  - complete_story_not_sample
+  - character_choice_has_cost
+  - scene_pressure_escalates
+  - prose_avoids_generic_phrases
+  - continuity_state_is_persisted
+  - qc_failures_create_repair_tasks
