@@ -54,10 +54,30 @@ export AIGCPP_MODEL=your-model-name
 - `packages/providers/` - OpenAI-compatible and Ollama provider adapters
 - `expert-packs/novel/v1/` - versioned novel expert pack
 - `expert-packs/film/v1/` - versioned film expert pack
+- `skills/worldbuilding-novel-expert/` - installable Codex skill for the novel methodology
 - `docs/` - public methodology and operating notes
 - `apps/local-web/` - local web worker notes
 - `apps/public-entry/` - optional Vercel-ready public entry
 - `tests/` - workflow, provider, web, expert-pack, and hygiene tests
+
+## Codex Skill
+
+The worldbuilding novel expert is also packaged as a Codex skill:
+
+```text
+skills/worldbuilding-novel-expert/
+```
+
+To install it from this repository, copy that folder into your Codex skills
+directory, for example:
+
+```bash
+mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
+cp -R skills/worldbuilding-novel-expert "${CODEX_HOME:-$HOME/.codex}/skills/"
+```
+
+Then invoke it with `$worldbuilding-novel-expert` when turning a worldview or
+story-world concept into a complete short novel package.
 
 ## CLI
 

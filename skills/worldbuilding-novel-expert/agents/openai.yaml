@@ -1,0 +1,4 @@
+interface:
+  display_name: "Worldbuilding Novel Expert"
+  short_description: "World rules to complete short fiction"
+  default_prompt: "Use $worldbuilding-novel-expert to turn this world concept into a complete short novel package."
